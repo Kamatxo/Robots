@@ -1,0 +1,259 @@
+/* Reglas Generales */
+:root {
+  --font-primary: Helvetica, Arial, sans-serif;
+  --font-sencondary: Georgia, Times, serif;
+  --color-fondo-header-footer: #000000;
+  --color-fondo-main: white;
+  --color-texto: darkslategray;
+  --color-seleccion: #ff1616;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-fondo-main);
+  color: var(--color-texto);
+}
+
+a {
+  text-decoration: none;
+}
+
+h2, dt {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+h5, h6, p, main li{
+  font-weight: 300;
+}
+
+h5{
+  margin-bottom: 10px;
+}
+
+p, main li{
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Generales para header y footer */
+header,
+footer {
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  background-color: var(--color-fondo-header-footer);
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1.2rem;
+  color: white;
+}
+
+/* ------------- Header ---------------- */
+header .imagen_icono {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+.icon {
+  width: 70px;
+  margin: 10px;
+}
+.selected {
+  font-weight: 700;
+  font-style: italic;
+}
+header li {
+  text-transform: uppercase;
+  list-style: none;
+  line-height: 1.5rem;
+}
+
+header a:hover {
+  color: var(--color-seleccion);
+}
+
+/* ------------- Main ---------------- */
+main {
+  width: 73%;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-family: var(--font-primary);
+  min-height: calc(100vh - 310px);
+}
+
+.title {
+  margin: 20px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+main a {
+  color: var(--color-seleccion);
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+.imagen_robot {
+  width: 100%;
+  margin-top: 20px;
+}
+
+main ul {
+  margin-left: 50px;
+  list-style: square;
+}
+
+figcaption.pie_foto {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+/* video */
+.video_contenedor_fluid {
+  width: 70%;
+  margin: auto;
+}
+
+.video_fluid {
+  border: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.adaptado {
+  background-color: #f4f4f4;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.texto_especial {
+  font-family: var(--font-sencondary);
+}
+
+.personal {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+}
+.imagen_personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.imagen_personal > img {
+  border-radius: 50%;
+}
+
+/* en el Main de tipos de robot */
+.slim {
+  width: 37%;
+  margin: 40px auto;
+}
+.sentencia {
+  background-color: #efefef;
+  padding: 20px;
+  border-left: 3px solid var(--color-seleccion);
+  font-family: var(--font-sencondary);
+  font-size: 20px;
+}
+.sentencia > p {
+  text-align: left;
+  line-height: 1.5;
+}
+main.slim ul {
+  line-height: 1.4rem;
+}
+ul.lista_robots {
+  margin-top: 40px;
+  list-style-image: url("../img/icon-robot.png");
+  margin-left: 40px;
+}
+ul.lista_robots>li{
+  margin-top: 20px;
+  line-height: 1.5;
+}
+ul.clases_robots_uso {
+  margin-top: 20px;
+  list-style: square;
+}
+ul.clases_robots_uso li{
+  margin: 5px 0;
+}
+ul.clases_robots_industria {
+  list-style: disc;
+}
+/* Main robots de fiction*/
+
+dt>cite, dd>p>cite{
+  font-family: var(--font-sencondary);
+  font-weight: 100;
+}
+.imagen_contenedor_fluid {
+  width: 44%;
+  margin: auto;
+}
+img.img_fluid {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+p.enlace_robots_ficcion {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ------------- Footer ---------------- */
+footer {
+  margin-bottom: 0;
+  margin-top: 40px;
+  padding-top: 2.5rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Responsive: cuando el ancho de la pantalla es menor de 600px */
+@media screen and (max-width: 600px) {
+  /* ponemos el contenedor, la descripcion de la chica y el texto de de página tipos de robots al 95%. */
+  main,
+  .personal,
+  .slim {
+    width: 95%;
+  }
+
+  /* Los video e imagenes el 100% del ancho */
+  .video_contenedor_fluid,
+  .imagen_contenedor_fluid {
+    width: 100%;
+  }
+}
