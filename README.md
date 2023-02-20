@@ -7,5 +7,5 @@ Página para ajustar el CSS, responsive y validado en W3C
 _Jorge Camacho Ochoa_, 
 _[sobre mi](https://kamatxo.github.io/Curriculum-Vitae/)_
 --
-## Page
-_[Ver página]()_
+## Página
+_[Ver página](https://kamatxo.github.io/Robots/)_
